@@ -1,0 +1,74 @@
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.main .form {
+  margin-top: 143px;
+  box-sizing: border-box;
+  width: 488px;
+  height: auto;
+  background-color: #ffffff;
+  padding: 0px 32px;
+  font-family: "quicksand";
+  font-size: 16px;
+  font-weight: 600;
+  border-top: 4px solid #3ac7ec;
+}
+.main .form p {
+  height: 30px;
+  font-size: 24px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: -12px;
+}
+.main .form .submit {
+  width: 216px;
+  height: 40px;
+  font-family: "quicksand";
+  background-color: #3fd28b;
+  margin-top: 34px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2392156863);
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f2834;
+  margin-left: 104px;
+}
+.main .form .not_registered_yet {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 24px;
+}
+.main .form .create_an_account {
+  text-align: center;
+  margin-top: 4px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #1f7a54;
+  margin-bottom: 24px;
+}
+.main .form .forgot {
+  font-weight: 600;
+  color: #1f7a54;
+  text-transform: uppercase;
+  text-align: right;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 32px;
+}
+.main .form .cbox {
+  margin-top: -15px;
+  font-family: "quicksand";
+}
+.main .form .mat-form-field {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+.main .form mat-form-field.mat-form-field {
+  font-family: "quicksand" !important;
+  font-weight: 600;
+  font-size: 16px;
+}
+.main .form .pw {
+  margin-top: 50px;
+}/*# sourceMappingURL=login.component.css.map */

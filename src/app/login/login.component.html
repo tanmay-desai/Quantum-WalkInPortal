@@ -1,0 +1,31 @@
+<div class="main">
+  <div class="form">
+    <p>Log In</p>
+    <mat-form-field style="width: 100% !important; margin-bottom: -30px">
+      <mat-label>Email ID</mat-label>
+      <input matInput required="" />
+      <mat-hint class="forgot" align="end"
+        >FORGOT USERNAME?</mat-hint
+      ></mat-form-field
+    ><br />
+
+    <mat-form-field style="width: 100% !important" class="pw">
+      <input
+        matInput
+        required=""
+        placeholder="Password"
+        [type]="hide ? 'password' : 'text'"
+      />
+      <mat-icon color="primary" matSuffix (click)="hide = !hide">{{
+        hide ? "visibility" : "visibility_off"
+      }}</mat-icon>
+      <mat-hint align="end" class="forgot">FORGOT USERNAME?</mat-hint>
+    </mat-form-field>
+
+    <mat-checkbox class="cbox">Remember Me</mat-checkbox>
+    <br />
+    <button mat-flat-button class="submit" color="primary">LOG IN</button>
+    <div class="not_registered_yet">Not registered yet?</div>
+    <div class="create_an_account">create an account</div>
+  </div>
+</div>

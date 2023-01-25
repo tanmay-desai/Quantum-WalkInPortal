@@ -1,0 +1,138 @@
+<div class="main">
+  <mat-stepper linear #stepper>
+    <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+      <form [formGroup]="firstFormGroup">
+        <div class="form-div">
+          <div class="one">
+            <ng-template matStepLabel>Personal Information</ng-template>
+            <mat-form-field>
+              <mat-label>First Name</mat-label>
+              <input
+                matInput
+                formControlName="firstCtrl"
+                placeholder="First name"
+                required
+              /> </mat-form-field
+            ><br />
+            <mat-form-field>
+              <mat-label>Last Name</mat-label>
+              <input
+                matInput
+                formControlName="firstCtrl"
+                placeholder="Last name"
+                required
+              /> </mat-form-field
+            ><br />
+            <mat-form-field>
+              <mat-label>Email</mat-label>
+              <input
+                matInput
+                formControlName="firstCtrl"
+                placeholder="Email"
+                required
+              /> </mat-form-field
+            ><br />
+            <mat-form-field style="width: 134px">
+              <mat-label>Phone Number</mat-label>
+              <input
+                matInput
+                formControlName="firstCtrl"
+                placeholder="Phone No"
+                required
+              /> </mat-form-field
+            ><br />
+            <button mat-button color="primary" class="upload_resume">
+              <mat-icon>upload</mat-icon>Upload Resume</button
+            ><br />
+            <mat-form-field style="margin-top: 20px">
+              <mat-label>Enter Portfolio URL (if any)</mat-label>
+              <input
+                matInput
+                formControlName="firstCtrl"
+                placeholder="Enter Portfolio URL (if any)"
+                required
+              /> </mat-form-field
+            ><br />
+            <mat-label style="font-size: 12px; color: #666666; font-weight: 600"
+              >Preferred Job Roles*</mat-label
+            >
+            <p>
+              <mat-checkbox>Instructional Designer</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox>Software Engineer</mat-checkbox>
+            </p>
+            <p>
+              <mat-checkbox formControlName="qa"
+                >Software Quality Engineer</mat-checkbox
+              >
+            </p>
+            <br />
+            <mat-form-field>
+              <mat-label
+                >If You Are Registering Via A Referral, Please Mention Full Name
+                Of The Employee Who Referred You</mat-label
+              >
+              <input
+                matInput
+                formControlName="firstCtrl"
+                required
+              /> </mat-form-field
+            ><br />
+            <p>
+              <mat-checkbox>Send me job related updates via mail</mat-checkbox>
+            </p>
+            <div></div>
+          </div>
+          <div class="two">
+            <mat-icon class="profile_picture">account_circle</mat-icon>
+            <button mat-button>UPLOAD DISPLAY PICTURE</button>
+            <p>Max. image size: 5 MB</p>
+          </div>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Qualifications</ng-template>
+        <mat-form-field>
+          <mat-label>Address</mat-label>
+          <input
+            matInput
+            formControlName="secondCtrl"
+            placeholder="Ex. 1 Main St, New York, NY"
+            required
+          />
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Review and Proceed</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  <div class="nxt">
+    <button
+      *ngIf="!(stepper.selectedIndex === 3)"
+      class="next"
+      (click)="next(stepper)"
+    >
+      Next
+    </button>
+    <button
+      *ngIf="!(stepper.selectedIndex === 0)"
+      class="next"
+      (click)="next(stepper)"
+    >
+      Previous
+    </button>
+  </div>
+</div>
